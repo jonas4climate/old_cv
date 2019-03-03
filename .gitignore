@@ -12,6 +12,8 @@
 *.cb2
 .*.lb
 
+#
+*.yaml
 ## Intermediate documents:
 *.dvi
 *.xdv

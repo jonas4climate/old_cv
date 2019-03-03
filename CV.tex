@@ -1,0 +1,175 @@
+% Inspiration: https://github.com/sebastianruder/cv and https://github.com/LukasSchaefer/CV
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[letterpaper,margin=0.5in]{geometry}
+%\usepackage[utf8]{inputenc} % Does not work with current code, therefore inputenc basic
+\usepackage{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+%\usepackage{tgpagella} % Does not work with current code
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+%\usepackage{fontawesome}
+
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Jonas Schäfer}}
+\\
+\ \\
+Room 1, Flat 116, Chamberlain, 37E Church Road \ \ B15 3SZ Birmingham, \ \ United Kingdom
+\\
+\texttt{jonas.schaefer00@gmail.com} \ \textbullet \ \ \href{tel:+44 7542 546497}{+44 7542 546497}‬ \ \textbullet \ \ \href{https://www.linkedin.com/in/jonas-schaefer/}{www.linkedin.com/in/jonas-schaefer}
+\end{center}
+
+\subsection*{Education}
+\hrule
+\vspace{0.4em}
+
+\noindent
+\headerrow{\textbf{University of Birmingham}}{\textbf{Birmingham, United Kingdom}}
+\\
+\headerrow{\emph{Bachelor of Science (BSc) in Computer Science}}{\emph{09/2018 -- Present}}
+\vspace{-1.6em}
+\begin{itemize*}
+    \item Expected graduation in June 2021
+    \item First year Computer Science courses (20CP each): \emph{Programming in Java, Mathematical Foundations, \\Artifical Intelligence, Data Structures \& Algorithms, Logic \& Computation}
+    \item First year Widening Horizons Module - Astronomy (20CP): \emph{The Cosmic Connection}
+
+
+\end{itemize*}
+
+\noindent
+\headerrow{\textbf{Warndt-Gymnasium, Völklingen}}{\textbf{Geislautern, Germany}}
+\\
+\headerrow{\emph{Secondary School}}{\emph{08/2010 -- 07/2018}}
+\vspace{-1.6em}
+\begin{itemize*}
+	\item Graduated \textbf{Abitur 1.5} with examination subjects:\\
+       English - 14, Mathematics - 13, Informatics - 12, Geography - 10,
+       German - 13
+    \item Honor received for \textbf{Year's best Informatics exam}
+
+\end{itemize*}
+
+
+\subsection*{Programming Experience}
+\hrule
+\vspace{0.4em}
+
+\noindent
+\headerrow{\textbf{Game Design: Asteroids - Project Work}}{\emph{04/2017 - 05/2017}}
+\headerrow{\emph{Warndt-Gymnasium: Informatics (using Pascal)}}{}
+\vspace{-1.6em}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Team effort of the whole Informatics class to design and implement the arcade video game \emph{Asteroids}
+\end{itemize}
+
+\noindent
+\headerrow{\textbf{Email-Address Finder - Assignment}}{\emph{10/2018 - 11/2018}}
+\headerrow{\emph{University of Birmingham: Programming in Java}}{}
+\vspace{-1.6em}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Implementation of a \emph{findEmailAddress} method to read valid emails out of a corrupted database file \emph{corrupteddb}
+    \item Mark: 95/100
+    \item Code can be found on my  \href{https://github.com/j0ner0n}{\underline{github-repository}}
+\end{itemize}
+
+%\vspace{0.4em}
+
+\subsection*{Internship Experience}
+\hrule
+\vspace{0.4em}
+
+\noindent
+\headerrow{\textbf{Engineering Internship "IngFo" at Saarland University}}{\emph{07/2015}}
+\\
+\vspace{-1.6em}
+\begin{itemize*}
+    \parskip=0.1em
+    \item 2 week Internship introducing me to a wide range of Engineering fields: \\
+    \emph{Materials Engineering, Materials Science, Systems Engineering, Automation Engineering, Construction Technology, Metrology, Drive Technology, Micro- and Nanotechnology}
+    \item Through group working on a wide range of engineering areas I developed communication and problem solving skills and extended my general science knowledge
+    \item Gained insight into the work of \emph{HYDAC International GmbH} \& \emph{ZF Friedrichshafen AG}
+
+\end{itemize*}
+
+%\vspace{0.4em}
+
+\subsection*{Extracurricular Activities}
+\hrule
+\vspace{0.4em}
+
+\noindent
+\headerrow{\textbf{Astronomy Talk}}{\emph{03/2017}}
+\vspace{-1.6em}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Advertising science subjects at the \emph{Science night} of the Warndtgymnasium by giving a talk about Astronomy
+    \item Improved presentation skills and demonstrated the ability to share enthusiasm \emph{(for Science)}
+\end{itemize}
+
+\noindent
+\headerrow{\textbf{Free tutoring lessons (Mathematics)}}{}
+
+%\vspace{0.4em}
+
+\subsection*{Skills \& Interests}
+\hrule
+\vspace{0.4em}
+\begin{description*}
+	\item[Programming:]
+	Java, Pascal (basic), Python (basic)
+    	\item[Markup:]
+    	\LaTeX, Markdown
+	\item[Technologies / Tools:]
+	Git
+	\item[Languages:]
+	German (native), English (fluent), French (advanced), Polish (beginner)
+   	\item[Interests:]
+	Programming, Science (esp. Space), Playing the guitar \& piano, Listening to music, Languages, Travelling
+\end{description*}
+
+
+% \subsection*{References}
+% \hrule
+% \vspace{0.8em}
+% \noindent
+
+\hfill \small \textit{[References available on request - CV last updated as of {\today}]}
+
+\end{document}
