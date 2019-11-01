@@ -1,0 +1,156 @@
+% Inspiration: https://github.com/sebastianruder/cv and https://github.com/LukasSchaefer/CV
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[letterpaper,margin=0.5in]{geometry}
+%\usepackage[utf8]{inputenc} % Does not work with current code, therefore inputenc basic
+%\usepackage{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+%\usepackage{tgpagella} % Does not work with current code
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+%\usepackage{fontawesome}
+
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Jonas Schäfer}}
+\\
+\ \\
+109 Poole Crescent \ - \ B17 0PE \ - \ Birmingham \ - \ United Kingdom
+\\
+\texttt{jonas.schaefer00@gmail.com} \ \textbullet \ \ +44 7542 546497 \ \textbullet \ \ \href{https://www.linkedin.com/in/jonas-schaefer/}{www.linkedin.com/in/jonas-schaefer}
+\end{center}
+
+\subsection*{\Large{Education}}
+\hrule
+\vspace{0.4em}
+
+\noindent
+\headerrow{\textbf{University of Birmingham}}{\textbf{Birmingham, United Kingdom}}
+\\
+\headerrow{\emph{Bachelor of Science (BSc) in Computer Science}}{\emph{09/2018 -- Present}}
+\vspace{-1.6em}
+\begin{itemize*}
+    \item Expected graduation in June 2021
+    \item 1st Year average: Upper-second class Honours
+    %\item Predicted Undergraduate: First-class Honours
+\end{itemize*}
+
+\noindent
+\headerrow{\textbf{Warndt-Gymnasium, Völklingen}}{\textbf{Geislautern, Germany}}
+\\
+\headerrow{\emph{Secondary School}}{\emph{08/2010 -- 07/2018}}
+\vspace{-1.6em}
+\begin{itemize*}
+	\item Graduated \textbf{Abitur 1.5} with examination subjects:\\
+       English - 14, Mathematics - 13, Informatics - 12, Geography - 10,
+       German - 13
+    \item Honor received for \textbf{Year's best final Informatics exam}
+\end{itemize*}
+
+
+\subsection*{\Large{Work Experience}}
+\hrule
+\vspace{0.4em}
+
+\noindent
+\headerrow{\textbf{IT System Administration Intern at \href{https://www.prowin.net/}{ProWIN Winter GmbH} (3 weeks)}}{\emph{07/2019}}
+\\
+\vspace{-1.6em}
+\begin{itemize*}
+	\parskip=0.1em
+	\item \textbf{Individual} development and integration of 
+	\begin{enumerate*}
+		\parskip=0.1em
+		\item an automated HTML Order Confirmation script to improve Bookkeeping and reduce manual communication
+		\item a Quick-navigation tool to navigate employee's most used websites in the network to improve working efficiency
+		\item new password policies and password creation advice to improve safety of the company's network
+	\end{enumerate*}
+	\item \textbf{Teamwork} to provide support for employees over the IT Service Desk using the collaborative Jira software
+	\vspace{2mm}
+	\item [$\rightarrow$] I quickly adopted to the working environment at ProWIN where I both \textbf{recognized opportunities of improvement} 
+	and \textbf{implemented software solutions} to improve the company's workflow efficiency and network security.
+\end{itemize*}
+
+\noindent
+\headerrow{\textbf{Engineering Internship "IngFo" at \href{https://www.uni-saarland.de/nc/en/home.html}{Saarland University} (2 weeks)}}{\emph{07/2015}}
+\\
+\vspace{-1.6em}
+\begin{itemize*}
+	\parskip=0.1em
+    \item I was introduced to a wide range of Engineering fields (e.g.\emph{ Materials, Automation, Systems Engineering, Drive Technology}) and
+	 %\emph{Materials Engineering, Materials Science, Systems Engineering, Automation Engineering, Construction Technology, Metrology, Drive Technology, Micro- and Nanotechnology}
+	  gained insight into research and inner company workings of \href{https://www.hydac.com/uk-en/start.html}{\textbf{HYDAC International GmbH}} \&  \\\href{https://www.zf.com/mobile/en/homepage/homepage.html}{\textbf{ZF Friedrichshafen AG}} and greatly improved my group working skills in both research and industry environments.
+\end{itemize*}
+
+\subsection*{\Large{Programming Projects}}
+\hrule
+\vspace{0.4em}
+\noindent
+\headerrow{\textbf{Complete Maze Solver - Robotics Groupwork - \fbox{20/20}}}{\emph{03/2019}}
+\\
+\vspace{-1.6em}
+\begin{itemize}
+	\item I worked together in a Group of 3 to implement a highly complex maze solving program for a \href{https://education.lego.com/en-gb/product/mindstorms-ev3}{\textbf{Lego EV3 robot}} using \href{http://www.lejos.org/}{\textbf{leJOS EV3}} where our functionalities and documentation went far beyond the expected level
+	\item \textbf{Core implementations}: Scanning + mapping of environment, bluetooth live-updating external GUI, A* path finding, 
+	call-back function over stack, fastest route prediction, partial concurrency
+	\item[$\rightarrow$] I \textbf{lead my team in an organized way} under strong time pressure and learned and applied a variety of new technologies
+\end{itemize}
+\emph{Most code, further documentation and more projects can be found on my \href{https://github.com/j0ner0n}{\underline{GitHub repository}}}
+
+\subsection*{\Large{Skills \& Interests}}
+\hrule
+\vspace{0.4em}
+\begin{description*}
+	\item[Programming:]
+	Java, C, Haskell
+    	\item[Markup:]
+    	\LaTeX, Markdown, HTML
+	\item[Technologies / Tools:]
+	Git, Unix, Zsh, JUnit (basic), 
+	\item[Languages:]
+	German (native), English (fluent), French (advanced), Polish (basic)
+   	\item[Interests:]
+	Programming, anything Science, Music (esp. playing the guitar \& piano), Languages, Travelling
+\end{description*}
+
+
+% \subsection*{References}
+% \hrule
+% \vspace{0.8em}
+% \noindent
+
+\hfill \small \textit{[References available on request - CV last updated as of {\today}]}
+
+\end{document}
