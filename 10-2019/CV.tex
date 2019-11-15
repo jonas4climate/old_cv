@@ -11,6 +11,8 @@
 \usepackage{latexsym}
 \usepackage{amssymb}
 \usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{graphicx}
 %\usepackage{fontawesome}
 
 \pagestyle{empty}
@@ -50,22 +52,22 @@
 \ \\
 109 Poole Crescent \ - \ B17 0PE \ - \ Birmingham \ - \ United Kingdom
 \\
-\texttt{jonas.schaefer00@gmail.com} \ \textbullet \ \ +44 7542 546497 \ \textbullet \ \ \href{https://www.linkedin.com/in/jonas-schaefer/}{www.linkedin.com/in/jonas-schaefer}
+\texttt{jonas.schaefer00@gmail.com} \ \textbullet \ \ +44 7542 546497 \ \textbullet \ \ \href{https://www.linkedin.com/in/jonas-schaefer/}{{linkedin.com/in/jonas-schaefer}} \ \textbullet \ \ \href{https://www.github.com/j0ner0n}{github.com/j0ner0n}
 \end{center}
 
 \subsection*{\Large{Education}}
+
 \hrule
 \vspace{0.4em}
-
 \noindent
 \headerrow{\textbf{University of Birmingham}}{\textbf{Birmingham, United Kingdom}}
 \\
-\headerrow{\emph{Bachelor of Science (BSc) in Computer Science}}{\emph{09/2018 -- Present}}
+\headerrow{\emph{Bachelor of Science (BSc) in Computer Science}}{\emph{09/2018 -- 06/2021}}
 \vspace{-1.6em}
 \begin{itemize*}
-    \item Expected graduation in June 2021
-    \item 1st Year average: Upper-second class Honours
-    %\item Predicted Undergraduate: First-class Honours
+	 \item 1st Year average: 2.1 Honours% | Predicted: First Class Honours
+	 \item Year 1 module areas: Mathematics, Logic, Robotics \& AI, Data Structures, Java
+	 \item Year 2 module areas: C \& Systems Programming, Software Engineering, Functional Programming
 \end{itemize*}
 
 \noindent
@@ -98,62 +100,81 @@
 		\item a Quick-navigation tool to navigate employee's most used websites in the network to improve working efficiency
 		\item new password policies and password creation advice to improve safety of the company's network
 	\end{enumerate*}
-	\item \textbf{Teamwork} to provide support for employees over the IT Service Desk using the collaborative Jira software
+	\item \textbf{Teamwork} to provide daily support for employees over the IT Service Desk using the collaborative Jira software
 	\vspace{2mm}
 	\item [$\rightarrow$] I quickly adopted to the working environment at ProWIN where I both \textbf{recognized opportunities of improvement} 
 	and \textbf{implemented software solutions} to improve the company's workflow efficiency and network security.
 \end{itemize*}
 
-\noindent
-\headerrow{\textbf{Engineering Internship "IngFo" at \href{https://www.uni-saarland.de/nc/en/home.html}{Saarland University} (2 weeks)}}{\emph{07/2015}}
-\\
-\vspace{-1.6em}
-\begin{itemize*}
-	\parskip=0.1em
-    \item I was introduced to a wide range of Engineering fields (e.g.\emph{ Materials, Automation, Systems Engineering, Drive Technology}) and
+
+%\noindent
+%\headerrow{\textbf{Engineering Internship "IngFo" at \href{https://www.uni-saarland.de/nc/en/home.html}{Saarland University} (2 weeks)}}{\emph{07/2015}}
+%\\
+%\vspace{-1.6em}
+%\begin{itemize*}
+%	\parskip=0.1em
+%    \item I was introduced to a wide range of Engineering fields (e.g.\emph{ Materials, Automation, Systems Engineering, Drive Technology}) and
 	 %\emph{Materials Engineering, Materials Science, Systems Engineering, Automation Engineering, Construction Technology, Metrology, Drive Technology, Micro- and Nanotechnology}
-	  gained insight into research and inner company workings of \href{https://www.hydac.com/uk-en/start.html}{\textbf{HYDAC International GmbH}} \&  \\\href{https://www.zf.com/mobile/en/homepage/homepage.html}{\textbf{ZF Friedrichshafen AG}} and greatly improved my group working skills in both research and industry environments.
-\end{itemize*}
+	  %gained insight into research and inner company workings of \href{https://www.hydac.com/uk-en/start.html}{\textbf{HYDAC International GmbH}} \&  \\\href{https://www.zf.com/mobile/en/homepage/homepage.html}{\textbf{ZF Friedrichshafen AG}} and greatly improved my group working skills in both research and industry environments.
+%\end{itemize*}
 
 \subsection*{\Large{Programming Projects}}
 \hrule
 \vspace{0.4em}
 \noindent
-\headerrow{\textbf{Complete Maze Solver - Robotics Groupwork - \fbox{20/20}}}{\emph{03/2019}}
+\headerrow{\textbf{Physics Simulator in Java - Private Project}}{11/2019}
+\vspace{-1.6em}
+\begin{itemize*}
+	\parskip=0.3em
+	\item Currently it \textbf{precisely simulates gravity} for all given objects within the space in either high-speed or real-time mode.
+	\item The simulator is capable of simulating the Sun-Eeart-Moon system over a year ($\Delta t = 0.1s$) with astounding precision and has a \textbf{variety of features and extensive documentation}
+\end{itemize*}
+
+\noindent
+\headerrow{\textbf{Complex Maze Solver - Robotics Groupwork - \fbox{20/20}}}{\emph{03/2019}}
 \\
 \vspace{-1.6em}
-\begin{itemize}
-	\item I worked together in a Group of 3 to implement a highly complex maze solving program for a \href{https://education.lego.com/en-gb/product/mindstorms-ev3}{\textbf{Lego EV3 robot}} using \href{http://www.lejos.org/}{\textbf{leJOS EV3}} where our functionalities and documentation went far beyond the expected level
-	\item \textbf{Core implementations}: Scanning + mapping of environment, bluetooth live-updating external GUI, A* path finding, 
+\begin{itemize*}
+	\parskip=0.3em
+	\item I worked in a Group of 3 on the implementation of a highly complex maze solving program for a \href{https://education.lego.com/en-gb/product/mindstorms-ev3}{\textbf{Lego EV3 robot}} using \href{http://www.lejos.org/}{\textbf{leJOS EV3}}. Our functionalities and documentation went far beyond the expected level of the module.
+	\item \textbf{Core implementations}: US and IR Scanning + mapping of environment, bluetooth live-updating external GUI, A* path finding, 
 	call-back function over stack, fastest route prediction, partial concurrency
-	\item[$\rightarrow$] I \textbf{lead my team in an organized way} under strong time pressure and learned and applied a variety of new technologies
-\end{itemize}
-\emph{Most code, further documentation and more projects can be found on my \href{https://github.com/j0ner0n}{\underline{GitHub repository}}}
+	\item[$\rightarrow$] I \textbf{sucessfully lead my team under time pressure} and both learned and applied a variety of new technologies.
+\end{itemize*}
+
+\noindent
+\emph{Please refer to my \href{https://github.com/j0ner0n}{\underline{GitHub repository}} for more code and information.}
 
 \subsection*{\Large{Skills \& Interests}}
 \hrule
-\vspace{0.4em}
-\begin{description*}
-	\item[General Skills:]
-	Leadership \& Teamwork, Inquiring personality, fast learner and adaptable
-	\item[Programming:]
-	Java, C, Haskell
-   \item[Markup:]
-   \LaTeX, Markdown, HTML
-	\item[Technologies / Tools:]
-	Git, Unix, Zsh, JUnit (basic), 
-	\item[Languages:]
-	German (native), English (fluent), French (advanced), Polish (basic)
-   	\item[Interests:]
-	Programming, anything Science, Music (esp. playing the guitar \& piano), Languages, Travelling
-\end{description*}
+\vspace{-1em}
+\begin{tabular}{p{0.5\linewidth}p{0.5\linewidth}}
+	\begin{description}[noitemsep]
+		\item[Programming:]
+		Java, C, Haskell, Zsh (basic)
+		\item[Markup:]
+		\LaTeX, Markdown, HTML
+	\end{description}
+	&
+	\begin{description}[noitemsep]
+		\item[Technologies/Tools:]
+		Git, Unix (macOS)
+		\item[Languages:]
+		German, English (fluent), French (adv.) 
+	\end{description}
+\end{tabular}\\
 
+\ \vspace{-1cm}
+
+\noindent
+\textbf{Interests:} Science videos and articles, Music (esp. playing the guitar \& piano), Languages, Travelling
+%\textbf{General Skills:} Leadership \& Teamwork, Inquiring personality, fast learner and adaptable \\
 
 % \subsection*{References}
 % \hrule
 % \vspace{0.8em}
 % \noindent
 
-\hfill \small \textit{[References available on request - CV last updated as of {\today}]}
+\vfill \hfill \small \textit{[CV last updated as of {\today}]}
 
 \end{document}
