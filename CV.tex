@@ -1,0 +1,212 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+
+\documentclass[]{jonas-cv}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Page \thepage \hspace{1pt}}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Jonas}{Schäfer}{
+    \address{109 Poole Crescent \ - \ B17 0PE \ - \ Birmingham \ - \ United Kingdom}\\
+    \vspace{1mm}
+    \email{jonas.schaefer00@gmail.com}
+    \smartphone{+44 7542 546497}
+    \linkedin{jonas-schaefer}\\
+    \vspace{1mm}
+    \github{j0ner0n}
+    % \homepage{lukaschaefer.de/profile}
+    %\infos{}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.34\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\sectionTitle{Education}{graduation-cap}
+
+\subsection{University of Birmingham}
+\descript{BSc Computer Science}
+\location{09/2018 -- 06/2021 | Birmingham, UK}
+\sectionsep
+
+\begin{tightemize}
+    \item \textbf{1st Year average: 2.1 Honours}
+    \item \textbf{Areas covered so far:}\\
+    Mathematics \& Logic \\
+    Functional Programming \\
+    Artificial Intelligence \\
+    Robotics \\
+    Data Structures \& Algorithms \\
+    Java \\
+    Software Engineering \\
+    C \& Systems Programming \\
+\end{tightemize}
+\largesectionsep
+
+
+\subsection{Warndtgymnasium}
+\descript{Abitur | 1.5}
+\location{07/2018 |  Geislautern, Germany}
+
+\begin{tightemize}
+    \item \textbf{Examination subjects:}\\
+             English -- 14 \\
+             Mathematics -- 13\\
+             Informatics -- 12\\
+             Geography -- 10\\
+             German -- 13
+    \item Honor received for \textbf{Year's best final Informatics exam}
+\end{tightemize}
+\largesectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Coursework}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\sectionTitle{Skills \& Interests}{poll}
+\subsection{Programming}
+Java, C, Haskell, Zsh (basic)\\
+\tinysectionsep
+
+\subsection{Markup}
+\LaTeX, Markdown, HTML\\
+\tinysectionsep
+
+\subsection{Technologies and Tools}
+Git, Unix (macOS)\\
+\tinysectionsep
+
+\subsection{Languages}
+German, English (fluent), French (adv.)
+
+\largesectionsep
+
+\subsection{Interests}
+Science videos and articles, Music (esp. playing the guitar \& piano), Languages, Travelling
+% \sectionsep
+
+\ \\
+\small \textit{[References available on request]}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.63\textwidth} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%     WORK EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\sectionTitle{Work Experience}{briefcase}
+\runsubsection{IT System Admin. Intern}
+\descript{| \href{https://www.prowin.net/}{ProWIN Winter GmbH}}
+\location{Jul 2019 (3 weeks) | Illingen, Germany}
+\sectionsep
+
+\begin{tightemize}
+    \item \textbf{Individual development} and integration of
+    \begin{enumerate}
+        \parskip=0.0em
+        \item an automated HTML Order Confirmation script to improve Bookkeeping and reduce manual communication
+        \item a Quick-navigation tool to navigate employee's most used websites in the network to improve working efficiency
+        \item new password policies and password creation advice to improve safety of the company's network
+    \end{enumerate}
+    \item \textbf{Teamwork} to provide daily support for employees over the IT Service Desk using the collaborative Jira software
+    \vspace{2mm}
+    
+    \item [\faicon{angle-double-right}] I quickly adopted to the working environment at ProWIN where I both \textbf{recognized opportunities of improvement} 
+    and \textbf{implemented software solutions} to improve the company's workflow and network security.
+\end{tightemize}
+\largesectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECT EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\sectionTitle{Project Experience}{code}
+
+\runsubsection{Physics Simulator in Java}
+\descript{| Private Software Project}
+\location{Nov 2019 | Birmingham, UK}
+\begin{tightemize}
+    \item The simulator currently \textbf{simulates gravity} in $\Delta t$ time steps for all given objects within the space in either high-speed or real-time mode.
+    \item It is capable of simulating the Sun-Earth-Moon system over a year with astounding precision as well as short runtime and has a \textbf{variety of features and extensive documentation}
+\end{tightemize}
+\largesectionsep
+
+\runsubsection{"joke" in zsh}
+\descript{| Private Software Project}
+\location{Nov 2019 | Birmingham, UK}
+\begin{tightemize}
+    \item A small project of mine to get to zsh, flag parsing and man pages 
+    \item I implemented a global command "joke" that can take flags to output random/specific/all jokes from a text file and wrote a man page for it
+\end{tightemize}
+\largesectionsep
+
+\runsubsection{Robot Maze Solver - \fbox{20/20}}
+\descript{| University Assignment}
+\location{Mar 2019 | Birmingham, UK}
+\begin{tightemize}
+   \item I lead a Group of 3 on the implementation of a highly complex maze solving program for a \href{https://education.lego.com/en-gb/product/mindstorms-ev3}{\textbf{Lego EV3 robot}} using the \href{http://www.lejos.org/}{\textbf{leJOS EV3}} JVM. 
+   Our software solution went far beyond the expected level of the module.
+   \item \textbf{Core implementations}: US and IR Scanning + mapping of environment, bluetooth live-updating external GUI, A* path finding, 
+   call-back function, fastest route prediction, partial concurrency
+   \item[\faicon{angle-double-right}] I \textbf{sucessfully lead my team under time pressure} and both \textbf{learned and applied} a variety of new technologies and programming techniques.
+\end{tightemize}
+
+\end{minipage}
+\end{document}  \documentclass[]{article}
