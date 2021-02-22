@@ -17,32 +17,29 @@
   ]{Font Awesome 5 Pro}
 }
 \ProcessOptions\relax
-% Define shortcut to load the Font Awesome font for brands.
+% Define shortcut to load the Font Awesome fonts.
 \newfontfamily{\FAbrands}[Path=\@fontdir]{Font Awesome 5 Brands Regular}
-% Define shortcut to load the Font Awesome font.
-\newfontfamily\FAR[
-  Path=\@fontdir,
-]{Font Awesome 5 Free Regular}
-
-\newfontfamily\FA[
-  Path=\@fontdir,
-]{Font Awesome 5 Free Solid}
+\newfontfamily\FAR[Path=\@fontdir]{Font Awesome 5 Free Regular}
+\newfontfamily\FA[Path=\@fontdir]{Font Awesome 5 Free Solid}
 
 % Generic command displaying an icon by its name.
 \newcommand*{\faicon}[1]{{
   \csname faicon@#1\endcsname
 }}
 
-% Only selected used fontawesome symbols
+% Only selected commonly used fontawesome symbols + a few CS specific ones
 % Identify Codes under https://fontawesome.com/icons?d=gallery
 \expandafter\def\csname faicon@angle-right\endcsname {\FA\symbol{"F105}}
 \expandafter\def\csname faicon@angle-double-right\endcsname {\FA\symbol{"F101}}
+\expandafter\def\csname faicon@angular\endcsname {\FAbrands\symbol{"F420}}
+\expandafter\def\csname faicon@arrow-right\endcsname {\FA\symbol{"F068}}
 \expandafter\def\csname faicon@award\endcsname {\FA\symbol{"F559}}
 \expandafter\def\csname faicon@briefcase\endcsname {\FA\symbol{"F0B1}}
 \expandafter\def\csname faicon@chalkboard-teacher\endcsname {\FA\symbol{"F51C}}
 \expandafter\def\csname faicon@chart-bar\endcsname {\FAR\symbol{"F080}}
 \expandafter\def\csname faicon@check\endcsname {\FA\symbol{"F00C}}
 \expandafter\def\csname faicon@check-circle\endcsname {\FA\symbol{"F058}}
+\expandafter\def\csname faicon@chevron-circle-right\endcsname {\FA\symbol{"F138}}
 \expandafter\def\csname faicon@clipboard\endcsname {\FA\symbol{"F328}}
 \expandafter\def\csname faicon@code\endcsname {\FA\symbol{"F121}}
 \expandafter\def\csname faicon@desktop\endcsname {\FA\symbol{"F108}}
@@ -57,12 +54,14 @@
 \expandafter\def\csname faicon@fill\endcsname {\FA\symbol{"F575}}
 \expandafter\def\csname faicon@fill-drip\endcsname {\FA\symbol{"F576}}
 \expandafter\def\csname faicon@fingerprint\endcsname {\FA\symbol{"F577}}
+\expandafter\def\csname faicon@git\endcsname {\FAbrands\symbol{"F841}}
 \expandafter\def\csname faicon@github\endcsname {\FAbrands\symbol{"F09B}}
 \expandafter\def\csname faicon@globe\endcsname {\FA\symbol{"F0AC}}
 \expandafter\def\csname faicon@graduation-cap\endcsname {\FA\symbol{"F19D}}
 \expandafter\def\csname faicon@home\endcsname {\FA\symbol{"F015}}
 \expandafter\def\csname faicon@info\endcsname {\FA\symbol{"F129}}
 \expandafter\def\csname faicon@instagram\endcsname {\FAbrands\symbol{"F16D}}
+\expandafter\def\csname faicon@java\endcsname {\FAbrands\symbol{"F4E4}}
 \expandafter\def\csname faicon@itunes-note\endcsname {\FAbrands\symbol{"F3B5}}
 \expandafter\def\csname faicon@language\endcsname {\FA\symbol{"F1AB}} 
 \expandafter\def\csname faicon@laptop\endcsname {\FA\symbol{"F109}} 
@@ -76,6 +75,7 @@
 \expandafter\def\csname faicon@paper-plane\endcsname {\FA\symbol{"F1D8}}
 \expandafter\def\csname faicon@poll\endcsname {\FA\symbol{"F681}} 
 \expandafter\def\csname faicon@poll-h\endcsname {\FA\symbol{"F682}}
+\expandafter\def\csname faicon@python\endcsname {\FAbrands\symbol{"F3E2}}
 \expandafter\def\csname faicon@quote-right\endcsname {\FA\symbol{"F10E}}
 \expandafter\def\csname faicon@reddit\endcsname {\FAbrands\symbol{"F1A1}}
 \expandafter\def\csname faicon@reddit-alien\endcsname {\FAbrands\symbol{"F281}}
@@ -92,4 +92,5 @@
 \expandafter\def\csname faicon@university\endcsname {\FA\symbol{"F19C}}
 \expandafter\def\csname faicon@user-circle\endcsname {\FA\symbol{"F2BD}}
 \expandafter\def\csname faicon@user-circle-regular\endcsname {\FAR\symbol{"F2BD}}
+
 \endinput

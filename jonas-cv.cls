@@ -20,6 +20,12 @@
 \usepackage{fontspec,xltxtra,xunicode,fontawesome5}
 \usepackage{enumitem}
 
+% Nice underlines
+\usepackage{soul}
+\setuldepth{Normal}
+% Use to underline all hrefs
+\newcommand{\hrefU}[2]{\href{#1}{\ul{#2}}}
+
 % Cite publications
 \usepackage{cite}
 \renewcommand\refname{\vskip -1.5cm}
@@ -29,6 +35,7 @@
 \definecolor{primary}{HTML}{2b2b2b} 
 \definecolor{headings}{HTML}{6A6A6A}
 \definecolor{subheadings}{HTML}{333333}
+\definecolor{ref}{HTML}{0000ff}
 
 % Set main fonts
 \defaultfontfeatures{Mapping=tex-text}
@@ -80,6 +87,9 @@ Last Updated on
 \titlespacing{\section}{0pt}{0pt}{0pt}
 
 % Font Awesome icons aliases, many more could be added here
+\newcommand{\angleDoubleRightSymbol}{\faicon{angle-double-right}}
+\newcommand{\chevronCircleRightSymbol}{\faicon{chevron-circle-right}}
+\newcommand{\arrowRightSymbol}{\faicon{arrow-right}}
 \newcommand{\mailSymbol}{\faicon{paper-plane}}
 \newcommand{\locationSymbol}{\faicon{map-marker-alt}}
 \newcommand{\infoSymbol}{\faicon{info}}
@@ -87,6 +97,10 @@ Last Updated on
 \newcommand{\homepageSymbol}{\faicon{user-circle}}
 \newcommand{\mobileSymbol}{\faicon{mobile-alt}}
 \newcommand{\githubSymbol}{\faicon{github}}
+\newcommand{\gitSymbol}{\faicon{git}}
+\newcommand{\angularSymbol}{\faicon{angular}}
+\newcommand{\pythonSymbol}{\faicon{python}}
+\newcommand{\javaSymbol}{\faicon{java}}
 
 % Command to create a nice looking link
 \newcommand\link[2]{\color{primary}\href{#1}{#2}\color{Black} }
@@ -129,7 +143,7 @@ Last Updated on
 
 % Headings command
 \titleformat{\section}{\color{headings}
-\scshape\fontspec{Helvetica Light}\fontsize{16pt}{24pt}\selectfont \raggedright}{} {0em}{}
+\fontspec{Helvetica Light}\fontsize{16pt}{24pt}\selectfont \raggedright}{} {0em}{}
 
 % Subheadings command
 \titleformat{\subsection}{\color{subheadings}
@@ -140,10 +154,10 @@ Last Updated on
 \fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
 
 % Descriptors command
-\newcommand{\descript}[1]{\color{subheadings}\raggedright\scshape\fontspec{Heiti SC Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+\newcommand{\descript}[1]{\color{subheadings}\raggedright\fontspec{Heiti SC Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
 % Location command
-\newcommand{\location}[1]{\color{headings}\raggedright\scshape\fontspec{Heiti TC Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+\newcommand{\location}[1]{\color{headings}\raggedright\fontspec{Heiti TC Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
 % Section seperators command
 \newcommand{\tinysectionsep}[0]{\vspace{4pt}}
