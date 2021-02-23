@@ -20,21 +20,29 @@
 \usepackage{fontspec,xltxtra,xunicode,fontawesome5}
 \usepackage{enumitem}
 
+% Small textbullets
+\newcommand{\smalltextbullet}[1]{{\footnotesize\textbullet{#1}}}
+
 % Nice underlines
 \usepackage{soul}
-\setuldepth{Normal}
+\setuldepth{Normal} % Depth of underline (in mm)
+\setulcolor{black} % Use to set color for underlines
 % Use to underline all hrefs
 \newcommand{\hrefU}[2]{\href{#1}{\ul{#2}}}
+\newcommand{\hrefUI}[2]{\href{#1}{\ul{#2}\color{headings}\extLinkSymbol}}
 
 % Cite publications
 \usepackage{cite}
 \renewcommand\refname{\vskip -1.5cm}
 
-% Color definitions
-\definecolor{date}{HTML}{666666} 
-\definecolor{primary}{HTML}{2b2b2b} 
-\definecolor{headings}{HTML}{6A6A6A}
+% Main color definitions
+\definecolor{headings}{HTML}{5A5A5A}
 \definecolor{subheadings}{HTML}{333333}
+\definecolor{primary}{HTML}{2b2b2b} 
+% Further colors
+\colorlet{firstname}{primary}
+\colorlet{lastname}{primary}
+\definecolor{date}{HTML}{666666} 
 \definecolor{ref}{HTML}{0000ff}
 
 % Set main fonts
@@ -66,98 +74,85 @@ Last Updated on
 \newcommand{\namesection}[3]{
 	\centering{
 		\sffamily
-		\fontspec{Helvetica Neue UltraLight}\fontsize{40pt}{10cm}\selectfont #1 
-		\fontspec{Helvetica Neue Light}\selectfont #2
+		\fontspec{Helvetica Neue UltraLight}\fontsize{40pt}{10cm}\selectfont \color{firstname}#1 
+		\fontspec{Helvetica Neue Light}\selectfont \color{lastname}#2
 	} \\
 	\vspace{5pt}
-	\centering{ \color{headings}\fontspec{Heiti TC Medium}\fontsize{11pt}{14pt}\selectfont #3}
+	\centering{\fontspec{Heiti TC Medium}\fontsize{11pt}{14pt}\selectfont \color{primary}#3}
 	\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
 	\vspace{-10pt}
 }
-
-\newcommand{\namesectionnorule}[3]{
-    \centering{
-        \sffamily
-        \fontspec{Helvetica Neue UltraLight}\fontsize{40pt}{10cm}\selectfont #1 
-        \fontspec{Helvetica Neue Light}\selectfont #2
-    } \\
-    \vspace{5pt}
-    \centering{ \color{headings}\fontspec{Heiti TC Medium}\fontsize{11pt}{14pt}\selectfont #3}
-}
 \titlespacing{\section}{0pt}{0pt}{0pt}
 
-% Font Awesome icons aliases, many more could be added here
+
+
+% FONT AWESOME ICONS
+
+% Utility icon things
+\newcommand{\angleRightSymbol}{\faicon{angle-right}}
 \newcommand{\angleDoubleRightSymbol}{\faicon{angle-double-right}}
 \newcommand{\chevronCircleRightSymbol}{\faicon{chevron-circle-right}}
 \newcommand{\arrowRightSymbol}{\faicon{arrow-right}}
+\newcommand{\linkSymbol}{\faicon{link}}
+\newcommand{\extLinkSymbol}{\faicon{external-link-alt}}
+
+% Specific use case icons
 \newcommand{\mailSymbol}{\faicon{paper-plane}}
 \newcommand{\locationSymbol}{\faicon{map-marker-alt}}
 \newcommand{\infoSymbol}{\faicon{info}}
 \newcommand{\linkedinSymbol}{\faicon{linkedin}}
 \newcommand{\homepageSymbol}{\faicon{user-circle}}
 \newcommand{\mobileSymbol}{\faicon{mobile-alt}}
+
+% CS technologies
 \newcommand{\githubSymbol}{\faicon{github}}
+\newcommand{\kaggleSymbol}{\faicon{kaggle}}
 \newcommand{\gitSymbol}{\faicon{git}}
 \newcommand{\angularSymbol}{\faicon{angular}}
 \newcommand{\pythonSymbol}{\faicon{python}}
 \newcommand{\javaSymbol}{\faicon{java}}
 
+% Icon colors
+\definecolor{linkedin}{HTML}{0a66c2}
+\definecolor{github}{HTML}{000000}
+\definecolor{map-marker-alt}{HTML}{fe7e00}
+
+
+
 % Command to create a nice looking link
-\newcommand\link[2]{\color{primary}\href{#1}{#2}\color{Black} }
+\newcommand\link[2]{\color{primary}\href{#1}{#2}\color{Black}}
 
-% Render a text with its symbol
-% Usage; \socialtext{<icon>}{<label>}
 \newcommand{\socialtext}[2]{\mbox{\textcolor{headings}{#1}\hspace{0.5em}#2\hspace{1em}}}
-
-% Render a link with its symbol
-% Usage; \sociallink{<icon>}{<label>}
 \newcommand{\sociallink}[3]{\mbox{\textcolor{headings}{#1}\hspace{0.5em}\link{#2}{#3}\hspace{1em}}}
 
-% Render author's address
-% Usage: \address{<address>}
 \newcommand*{\address}[1]{\socialtext{\locationSymbol}{#1}}
-
-% Render author's infos
-% Usage: \infos{<infos>}
 \newcommand*{\infos}[1]{\socialtext{\infoSymbol}{#1}}
-
-% Render author's linked-in
-% Usage: \linkedin{<linked-in-nick>}
-\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1}{linkedin.com/in/#1}}
-
-% Render author's github
-% Usage: \github{<github-nick>}
-\newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{github.com/#1}}           % Github icon + URL
-
-% Render author's homepage
-% Usage: \homepage{<web-URL>}
+\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1}{#1}}
+\newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{#1}}     
+\newcommand*{\kaggle}[1]{\sociallink{\kaggleSymbol}{https://www.kaggle.com/#1}{#1}}        % Github icon + URL
 \newcommand*{\homepage}[1]{\sociallink{\homepageSymbol}{https://#1}{#1}}
-
-% Render author's email
-% Usage: \email{<email adress>}
 \newcommand*{\email}[1]{\sociallink{\mailSymbol}{mailto:#1}{#1}}
-
-% Render author's mobile phone 
-% Usage: \smartphone{<mobile phone number>}
-\newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}    
+\newcommand*{\smartphone}[1]{\sociallink{\mobileSymbol}{tel:#1}{#1}}
 
 % Headings command
 \titleformat{\section}{\color{headings}
 \fontspec{Helvetica Light}\fontsize{16pt}{24pt}\selectfont \raggedright}{} {0em}{}
 
-% Subheadings command
+% Subheadings command 
 \titleformat{\subsection}{\color{subheadings}
 \fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
 \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
-\newcommand{\runsubsection}[1]{\color{subheadings}
-\fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+\newcommand{\runsubsection}[1]{
+	\color{subheadings}
+	\fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont
+}
 
 % Descriptors command
 \newcommand{\descript}[1]{\color{subheadings}\raggedright\fontspec{Heiti SC Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
-% Location command
-\newcommand{\location}[1]{\color{headings}\raggedright\fontspec{Heiti TC Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+% subdescription command
+\newcommand{\subdescript}[1]{\color{headings}\raggedright\fontspec{Heiti TC Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
 % Section seperators command
 \newcommand{\tinysectionsep}[0]{\vspace{4pt}}
@@ -165,7 +160,7 @@ Last Updated on
 \newcommand{\largesectionsep}[0]{\vspace{14pt}}
 
 % Title definition with fontawesome symbol
-\newcommand\sectionTitle[2]{\section*{\texorpdfstring{\faicon{#2}\enspace \uppercase{#1}}{\uppercase{#1}}}}
+\newcommand\sectionTitle[2]{\section*{\texorpdfstring{\faicon{#2}\enspace \uppercase{\textbf{#1}}}{\uppercase{#1}}}}
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}{\end{itemize}\vspace{-\topsep}}
